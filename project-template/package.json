@@ -1,0 +1,30 @@
+{
+  "main": "src/index.js",
+  "scripts": {
+    "lint:sol": "solhint \"contracts/**/*.sol\" -c node_modules/@animoca/ethereum-contracts-core_library/.solhint.json",
+    "lint": "run-s lint:js lint:sol",
+    "fix:sol": "solhint --fix \"contracts/**/*.sol\" -c node_modules/@animoca/ethereum-contracts-core_library/.solhint.json",
+    "fix": "run-s fix:js fix:sol",
+    "format:sol": "prettier --write \"**/*.sol\"",
+    "format": "run-s format:js format:sol",
+    "compile": "hardhat compile --show-stack-traces",
+    "flatten": "hardhat flatten-all --show-stack-traces",
+    "smartcheck": "smartcheck -p contracts &> smartcheck.log",
+    "test": "hardhat test --show-stack-traces",
+    "coverage": "hardhat coverage --show-stack-traces",
+    "ganache": "ganache-cli -g 1000000000",
+    "gas-report": "wait-on tcp:8545 && cross-env REPORT_GAS=true hardhat --network localhost test --show-stack-traces",
+    "doc:sol": "hardhat docgen --show-stack-traces",
+    "doc": "run-s doc:sol",
+    "clean:compile": "rm -rf cache",
+    "clean:artifacts:soft": "animoca-clean-artifacts",
+    "clean:artifacts:hard": "rm -rf artifacts",
+    "clean:flatten": "rm -rf contracts_flattened",
+    "clean:smartcheck": "rm -rf smartcheck*",
+    "clean:coverage": "rm -rf coverage* .coverage*",
+    "clean:doc": "rm -rf docs",
+    "clean:contracts": "run-p clean:compile clean:artifacts:soft clean:flatten clean:smartcheck clean:coverage clean:doc",
+    "run-all:contracts": "run-s format fix clean:contracts clean:artifacts:hard compile flatten smartcheck test coverage doc",
+    "prepack:contracts": "run-s clean:artifacts:hard compile clean"
+  }
+}
