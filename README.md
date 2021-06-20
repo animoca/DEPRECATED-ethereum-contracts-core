@@ -20,14 +20,14 @@ This project uses hardhat and augments it with a set of plugins aimed at providi
 Install as a module dependency in your host NodeJS project:
 
 ```bash
-npm install @animoca/ethereum-contracts-core_library --save-dev
+npm install @animoca/ethereum-contracts-core --save-dev
 npm install hardhat --save-dev
 ```
 
 or
 
 ```bash
-yarn add -D @animoca/ethereum-contracts-core_library
+yarn add -D @animoca/ethereum-contracts-core
 yarn add -D hardhat
 ```
 
@@ -46,7 +46,7 @@ See package.json scripts for detailed commands.
 Import dependency contracts into your Solidity contracts and derive as needed:
 
 ```solidity
-import "@animoca/ethereum-contracts-core_library/contracts/{{Contract Group}}/{{Contract}}.sol"
+import "@animoca/ethereum-contracts-core/contracts/{{Contract Group}}/{{Contract}}.sol"
 ```
 
 #### Test and Migration Scripts
@@ -54,5 +54,5 @@ import "@animoca/ethereum-contracts-core_library/contracts/{{Contract Group}}/{{
 Require the NodeJS module dependency in your test and migration scripts as needed:
 
 ```javascript
-const { constants, interfaces, behaviors } = require("@animoca/ethereum-contracts-core_library");
+const { constants, interfaces, behaviors } = require("@animoca/ethereum-contracts-core");
 ```

@@ -1,9 +1,9 @@
 {
   "main": "src/index.js",
   "scripts": {
-    "lint:sol": "solhint \"contracts/**/*.sol\" -c node_modules/@animoca/ethereum-contracts-core_library/.solhint.json",
+    "lint:sol": "solhint \"contracts/**/*.sol\" -c node_modules/@animoca/ethereum-contracts-core/.solhint.json",
     "lint": "run-s lint:js lint:sol",
-    "fix:sol": "solhint --fix \"contracts/**/*.sol\" -c node_modules/@animoca/ethereum-contracts-core_library/.solhint.json",
+    "fix:sol": "solhint --fix \"contracts/**/*.sol\" -c node_modules/@animoca/ethereum-contracts-core/.solhint.json",
     "fix": "run-s fix:js fix:sol",
     "format:sol": "prettier --write \"**/*.sol\"",
     "format": "run-s format:js format:sol",
