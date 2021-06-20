@@ -1,0 +1,211 @@
+{
+  "id": "8de6fe826a40b22bd095cbe745ff5e49",
+  "_format": "hh-sol-build-info-1",
+  "solcVersion": "0.7.6",
+  "solcLongVersion": "0.7.6+commit.7338295f",
+  "input": {
+    "language": "Solidity",
+    "sources": {
+      "contracts/bridging/IChildToken.sol": {
+        "content": "// SPDX-License-Identifier: MIT\n\npragma solidity >=0.7.6 <0.8.0;\n\ninterface IChildToken {\n    function deposit(address user, bytes calldata depositData) external;\n}\n"
+      }
+    },
+    "settings": {
+      "optimizer": {
+        "enabled": true,
+        "runs": 2000
+      },
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers"
+          ],
+          "": [
+            "ast"
+          ]
+        }
+      }
+    }
+  },
+  "output": {
+    "contracts": {
+      "contracts/bridging/IChildToken.sol": {
+        "IChildToken": {
+          "abi": [
+            {
+              "inputs": [
+                {
+                  "internalType": "address",
+                  "name": "user",
+                  "type": "address"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "depositData",
+                  "type": "bytes"
+                }
+              ],
+              "name": "deposit",
+              "outputs": [],
+              "stateMutability": "nonpayable",
+              "type": "function"
+            }
+          ],
+          "evm": {
+            "bytecode": {
+              "generatedSources": [],
+              "linkReferences": {},
+              "object": "",
+              "opcodes": "",
+              "sourceMap": ""
+            },
+            "deployedBytecode": {
+              "generatedSources": [],
+              "immutableReferences": {},
+              "linkReferences": {},
+              "object": "",
+              "opcodes": "",
+              "sourceMap": ""
+            },
+            "methodIdentifiers": {
+              "deposit(address,bytes)": "cf2c52cb"
+            }
+          }
+        }
+      }
+    },
+    "sources": {
+      "contracts/bridging/IChildToken.sol": {
+        "ast": {
+          "absolutePath": "contracts/bridging/IChildToken.sol",
+          "exportedSymbols": {
+            "IChildToken": [
+              9
+            ]
+          },
+          "id": 10,
+          "license": "MIT",
+          "nodeType": "SourceUnit",
+          "nodes": [
+            {
+              "id": 1,
+              "literals": [
+                "solidity",
+                ">=",
+                "0.7",
+                ".6",
+                "<",
+                "0.8",
+                ".0"
+              ],
+              "nodeType": "PragmaDirective",
+              "src": "33:31:0"
+            },
+            {
+              "abstract": false,
+              "baseContracts": [],
+              "contractDependencies": [],
+              "contractKind": "interface",
+              "fullyImplemented": false,
+              "id": 9,
+              "linearizedBaseContracts": [
+                9
+              ],
+              "name": "IChildToken",
+              "nodeType": "ContractDefinition",
+              "nodes": [
+                {
+                  "functionSelector": "cf2c52cb",
+                  "id": 8,
+                  "implemented": false,
+                  "kind": "function",
+                  "modifiers": [],
+                  "name": "deposit",
+                  "nodeType": "FunctionDefinition",
+                  "parameters": {
+                    "id": 6,
+                    "nodeType": "ParameterList",
+                    "parameters": [
+                      {
+                        "constant": false,
+                        "id": 3,
+                        "mutability": "mutable",
+                        "name": "user",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 8,
+                        "src": "111:12:0",
+                        "stateVariable": false,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        "typeName": {
+                          "id": 2,
+                          "name": "address",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "111:7:0",
+                          "stateMutability": "nonpayable",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        },
+                        "visibility": "internal"
+                      },
+                      {
+                        "constant": false,
+                        "id": 5,
+                        "mutability": "mutable",
+                        "name": "depositData",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 8,
+                        "src": "125:26:0",
+                        "stateVariable": false,
+                        "storageLocation": "calldata",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_calldata_ptr",
+                          "typeString": "bytes"
+                        },
+                        "typeName": {
+                          "id": 4,
+                          "name": "bytes",
+                          "nodeType": "ElementaryTypeName",
+                          "src": "125:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes_storage_ptr",
+                            "typeString": "bytes"
+                          }
+                        },
+                        "visibility": "internal"
+                      }
+                    ],
+                    "src": "110:42:0"
+                  },
+                  "returnParameters": {
+                    "id": 7,
+                    "nodeType": "ParameterList",
+                    "parameters": [],
+                    "src": "161:0:0"
+                  },
+                  "scope": 9,
+                  "src": "94:68:0",
+                  "stateMutability": "nonpayable",
+                  "virtual": false,
+                  "visibility": "external"
+                }
+              ],
+              "scope": 10,
+              "src": "66:98:0"
+            }
+          ],
+          "src": "33:132:0"
+        },
+        "id": 0
+      }
+    }
+  }
+}

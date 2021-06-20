@@ -1,6 +1,6 @@
 {
   "name": "@animoca/ethereum-contracts-core",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Base dependency for solidity contracts projects",
   "keywords": [
     "animoca",
