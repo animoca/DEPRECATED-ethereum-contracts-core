@@ -4,8 +4,8 @@
 
 "@animoca/ethereum-hardhat-bootstrap@^1.0.0":
   version "1.0.0"
-  resolved "https://nexus3.animocabrands.com/repository/npm-group/@animoca/ethereum-hardhat-bootstrap/-/ethereum-hardhat-bootstrap-1.0.0.tgz#2a05adbaaa183f06e5258c62d4607cc2a5dd3709"
-  integrity sha512-bCUXCWoLUbqNvMPis7w3IiMI33rqOa1N5n2ahc2Dn+p+Dm8s5+5ma/7ouyxTBngLhLUc8OkSa7m4DZ2lNF+EyA==
+  resolved "https://nexus3.animocabrands.com/repository/npm-group/@animoca/ethereum-hardhat-bootstrap/-/ethereum-hardhat-bootstrap-1.0.0.tgz#b6b19ef9061cff7127a7ab2637a88b07b7e21d7c"
+  integrity sha512-leJGz/JBE+m8DmbBsnu+pb2pUTtpGpjwZmcCmT+yIARJDZ8vZbUzoLYiqr1A/rzYXi6Lb5bPrrojCOMMx8Awbw==
   dependencies:
     commander "^7.2.0"
     eslint "^7.29.0"
@@ -1001,9 +1001,9 @@
     "@types/node" "*"
 
 "@types/chai@^4.2.0":
-  version "4.2.18"
-  resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.2.18.tgz#0c8e298dbff8205e2266606c1ea5fbdba29b46e4"
-  integrity sha512-rS27+EkB/RE1Iz3u0XtVL5q36MGDWbgYe7zWiodyKNUnthxY0rukK5V36eiUCtCisB7NN8zKYH6DO2M37qxFEQ==
+  version "4.2.19"
+  resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.2.19.tgz#80f286b515897413c7a35bdda069cc80f2344233"
+  integrity sha512-jRJgpRBuY+7izT7/WNXP/LsMO9YonsstuL+xuvycDyESpoDoIAsMd7suwpB4h9oEWB+ZlPTqJJ8EHomzNhwTPQ==
 
 "@types/concat-stream@^1.6.0":
   version "1.6.0"
