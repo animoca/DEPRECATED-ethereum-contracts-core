@@ -4,8 +4,8 @@
 
 "@animoca/ethereum-hardhat-bootstrap@^1.0.0":
   version "1.0.0"
-  resolved "https://nexus3.animocabrands.com/repository/npm-group/@animoca/ethereum-hardhat-bootstrap/-/ethereum-hardhat-bootstrap-1.0.0.tgz#b6b19ef9061cff7127a7ab2637a88b07b7e21d7c"
-  integrity sha512-leJGz/JBE+m8DmbBsnu+pb2pUTtpGpjwZmcCmT+yIARJDZ8vZbUzoLYiqr1A/rzYXi6Lb5bPrrojCOMMx8Awbw==
+  resolved "https://registry.yarnpkg.com/@animoca/ethereum-hardhat-bootstrap/-/ethereum-hardhat-bootstrap-1.0.0.tgz#f6a541a30946e64be5ea3deb557ff0bf2720a5b2"
+  integrity sha512-f5H5dMIfC61LDGuIMfmnMrySPCCenx6fjLrhTLgB+Ketdj1viXRzRxo5950b0wZUvmV5gWXW9cm9MBF2KEN+9Q==
   dependencies:
     commander "^7.2.0"
     eslint "^7.29.0"
