@@ -32,7 +32,6 @@ library AddressIsContract {
         // constructor execution.
 
         uint256 size;
-        // solhint-disable-next-line no-inline-assembly
         assembly {
             size := extcodesize(account)
         }

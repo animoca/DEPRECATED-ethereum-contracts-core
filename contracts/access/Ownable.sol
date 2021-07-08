@@ -39,6 +39,7 @@ abstract contract Ownable is ManagedIdentity, IERC173 {
     /**
      * See {IERC173-transferOwnership(address)}
      * @dev Reverts if the sender is not the current contract owner.
+     * @param newOwner the address of the new owner. Use the zero address to renounce the ownership.
      */
     function transferOwnership(address newOwner) public virtual override {
         _requireOwnership(_msgSender());

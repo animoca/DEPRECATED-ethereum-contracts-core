@@ -4,8 +4,11 @@ pragma solidity >=0.7.6 <0.8.0;
 
 import {ManagedIdentity} from "../metatx/ManagedIdentity.sol";
 import {Ownable} from "../access/Ownable.sol";
+import {IWrappedERC20, ERC20Wrapper} from "./ERC20Wrapper.sol";
 
 abstract contract Recoverable is ManagedIdentity, Ownable {
+    using ERC20Wrapper for IWrappedERC20;
+
     /**
      * Extract ERC20 tokens which were accidentally sent to the contract to a list of accounts.
      * Warning: this function should be overriden for contracts which are supposed to hold ERC20 tokens
@@ -27,7 +30,7 @@ abstract contract Recoverable is ManagedIdentity, Ownable {
         uint256 length = accounts.length;
         require(length == tokens.length && length == amounts.length, "Recov: inconsistent arrays");
         for (uint256 i = 0; i != length; ++i) {
-            require(RecoverableERC20(tokens[i]).transfer(accounts[i], amounts[i]), "Recov: transfer failed");
+            IWrappedERC20(tokens[i]).wrappedTransfer(accounts[i], amounts[i]);
         }
     }
 
@@ -52,17 +55,12 @@ abstract contract Recoverable is ManagedIdentity, Ownable {
         uint256 length = accounts.length;
         require(length == contracts.length && length == tokenIds.length, "Recov: inconsistent arrays");
         for (uint256 i = 0; i != length; ++i) {
-            RecoverableERC721(contracts[i]).transferFrom(address(this), accounts[i], tokenIds[i]);
+            IRecoverableERC721(contracts[i]).transferFrom(address(this), accounts[i], tokenIds[i]);
         }
     }
 }
 
-interface RecoverableERC20 {
-    /// See {IERC20-transfer(address,uint256)}
-    function transfer(address recipient, uint256 amount) external returns (bool);
-}
-
-interface RecoverableERC721 {
+interface IRecoverableERC721 {
     /// See {IERC721-transferFrom(address,address,uint256)}
     function transferFrom(
         address from,
