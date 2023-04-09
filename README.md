@@ -1,4 +1,14 @@
-# Solidity Project Contracts Core Library
+# DEPRECATED - Solidity Project Contracts Core Library
+
+## Deprecation notice
+
+This repository is now deprecated and not maintained any longer. Use the new Animoca's Solidity libraries instead:
+
+- Core contracts: <https://github.com/animoca/ethereum-contracts>
+- Assets bridging contracts: <https://github.com/animoca/ethereum-contracts-bridging>
+- Project template: <https://github.com/animoca/template-ethereum-contracts>
+
+## Introduction
 
 This project serves as a base dependency for Solidity-based smart contract projects by providing common dependencies, configurations, contracts, scripts, interfaces, constants, and testing utilities.
 
